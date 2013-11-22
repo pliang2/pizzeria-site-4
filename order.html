@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Order</title>
+		<meta name="author" content="pliang2">
+		<link rel="shortcut icon" href="img/logo.png">
+		<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div class="container">
+			<p class="page-name">Order</p>
+
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="navbar-header">
+		            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-menu">
+		                <span class="sr-only">Toggle Navigation</span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>
+		                <span class="icon-bar"></span>                        
+		            </button>
+		            <a class="navbar-brand" href="index.html"><img class="store-logo" src="img/logo.png" alt="Store logo"></a>
+		        </div>
+
+		        <div class="collapse navbar-collapse navbar-menu">
+		        	<ul class="nav navbar-nav">
+		        		<li><a href="index.html">Home</a></li>
+						<li><a href="menu.html">Menu</a></li>
+						<li><a href="about.html">About Us</a></li>
+		        	</ul>
+		        </div>
+		        <p class="delivery">Call us for delivery: 206-555-1212</p>
+			</nav>
+
+			<h3 class="pizza-title">Meat Pizzas</h3>
+			<div class="meat-pizza-menu"></div>
+			<h3 class="pizza-title">Vegetarian Pizzas</h3>
+			<div class="veg-pizza-menu"></div>
+
+			<div class="template pizza">
+                <div class="details">
+                    <p class="name"></p>
+                    <p class="description"></p>
+                    <p class="prices"><span class="small-price"></span> <span class="medium-price"></span> <span class="large-price"></span></p>
+                </div>
+            </div>
+
+            <h2>Drinks:</h2>
+            <div class="drink-menu"></div>
+
+            <div class="template drink">
+                <div class="details">
+                    <p class="drink-name"></p>
+                    <p class="drink-price"></p>
+                </div>
+            </div>
+
+			<h2>Desserts:</h2>
+            <div class="dessert-menu"></div>
+
+            <div class="template dessert">
+                <div class="details">
+                    <p class="dessert-name"></p>
+                    <p class="dessert-price"></p>
+                </div>
+            </div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+		<script src="http://www.dawgpizza.com/orders/menu.js"></script>
+		<script src="js/menu-template.js"></script>
+		<script src="js/menu.js"></script>
+	</body>
+</html>
