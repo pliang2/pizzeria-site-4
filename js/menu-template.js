@@ -6,21 +6,20 @@ function pizzaDisplay(menu) {
 	var vegPizzaMenu;
 	var instance;
 
-	template = $('.template');
+	template = $('.template-pizza');
 	meatPizzaMenu = $('.meat-pizza-menu');
 	vegPizzaMenu = $('.veg-pizza-menu');
 	meatPizzaMenu.empty();
 	vegPizzaMenu.empty();
 
 	for (idx = 0; idx < com.dawgpizza.menu.pizzas.length; ++idx) {
-		instance = template.clone();
+	    instance = template.clone();
 	    pizza = com.dawgpizza.menu.pizzas[idx];
 	    instance.find('.name').html(pizza.name);
 	    instance.find('.description').html(pizza.description);
 	    instance.find('.small-price').html("$" + pizza.prices[0] + "/");
 	    instance.find('.medium-price').html("$" + pizza.prices[1] + "/");
 	    instance.find('.large-price').html("$" + pizza.prices[2]);
-	    instance.removeClass('template');
 	    if (pizza.vegetarian) {
 	    	vegPizzaMenu.append(instance);
 	    }
@@ -45,7 +44,7 @@ function drinkDisplay(menu) {
 	var drinkMenu;
 	var instance;
 
-	template = $('.template');
+	template = $('.template-drink');
 	drinkMenu = $('.drink-menu');
 	drinkMenu.empty();
 
@@ -54,7 +53,6 @@ function drinkDisplay(menu) {
 	    drink = com.dawgpizza.menu.drinks[idx];
 	    instance.find('.drink-name').html(drink.name);
 	    instance.find('.drink-price').html("$" + drink.price);
-	    instance.removeClass('template');
 	    drinkMenu.append(instance);
 
 	    //drink.name = name of drink
@@ -70,7 +68,7 @@ function dessertDisplay(menu) {
 	var dessertMenu;
 	var instance;
 
-	template = $('.template');
+	template = $('.template-dessert');
 	dessertMenu = $('.dessert-menu');
 	dessertMenu.empty();
 
@@ -79,7 +77,6 @@ function dessertDisplay(menu) {
 	    dessert = com.dawgpizza.menu.desserts[idx];
 	    instance.find('.dessert-name').html(dessert.name);
 	    instance.find('.dessert-price').html("$" + dessert.price);
-	    instance.removeClass('template');
 	    dessertMenu.append(instance);
 	}
 }
