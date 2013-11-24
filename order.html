@@ -34,47 +34,75 @@
 		        <p class="delivery">Call us for delivery: 206-555-1212</p>
 			</nav>
 
+			<div class="row">
+                <div class="col-md-4 col-md-push-8">
+                    <h2>Your Cart</h2>
+                    <div class="cart-container"></div>
+                    <div class="cart-footer">
+                        <div class="row total-row">
+                            <div class="col-xs-10">
+                                Total:
+                            </div>
+                            <div class="col-xs-2">
+                                $<span class="total-price"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 button-row">
+                                <button type="button" class="btn btn-primary place-order">Place My Order</button>
+                            </div>
+                        </div>                        
+                    </div>
+                </div>
+                <!--<div class="col-md-8 col-md-pull-4">
+                    <div class="movies-container"></div>        
+                </div> -->
+            </div>
+
 			<h3 class="pizza-title">Meat Pizzas</h3>
 			<div class="meat-pizza-menu"></div>
 			<h3 class="pizza-title">Vegetarian Pizzas</h3>
 			<div class="veg-pizza-menu"></div>
 
-			<div class="template pizza">
+			<div class="template-pizza">
                 <div class="details">
                     <p class="name"></p>
                     <p class="description"></p>
-	                <p class="prices"><span class="small-price">
+	                <p class="prices"><span class="small-price"></span>
 	                	<button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="small" data-price="">Add to 	Cart
 						</button>
-	                </span>
-                    <span class="medium-price"></span> 
-                    <!--<button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="medium" data-price="">Add to 	Cart
-					</button>-->
-                    <span class="large-price"></span></p>
-                    <!--<button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="large" data-price="">Add to 	Cart
-					</button>-->
+	                    <span class="medium-price"></span> 
+	                    <button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="medium" data-price="">Add to 	Cart
+						</button>
+	                    <span class="large-price"></span>
+	                    <button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="large" data-price="">Add to 	Cart
+						</button>
+                	</p>
+                    
                 </div>
             </div>
 
             <h2>Drinks:</h2>
             <div class="drink-menu"></div>
 
-            <div class="template drink">
+            <div class="template-drink">
                 <div class="details">
                     <p class="drink-name"></p>
                     <p class="drink-price"></p>
-                    <!--<button class="btn btn-default add-to-cart" type="button" data-type="drink" data-name="" data-price="">Add to 	Cart
-					</button> -->
+                    <button class="btn btn-default add-to-cart" type="button" data-type="drink" data-name="" data-price="">Add to 	Cart
+					</button>
                 </div>
             </div>
 
 			<h2>Desserts:</h2>
             <div class="dessert-menu"></div>
 
-            <div class="template dessert">
+            <div class="template-dessert">
                 <div class="details">
                     <p class="dessert-name"></p>
                     <p class="dessert-price"></p>
+                    <button class="btn btn-default add-to-cart" type="button" data-type="dessert" data-name="" data-price="">Add to 	Cart
+					</button>
                 </div>
             </div>
 		</div>
