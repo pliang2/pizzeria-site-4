@@ -12,6 +12,7 @@
 	<body>
 		<div class="container">
 			<p class="page-name">Order</p>
+			<p class="delivery-info">Delivery in Seattle: Noon-11:00 PM. Cash/Credit Accepted.</p>
 
 			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="navbar-header">
@@ -54,63 +55,107 @@
                         </div>                        
                     </div>
                 </div>
-                <!--<div class="col-md-8 col-md-pull-4">
-                    <div class="movies-container"></div>        
-                </div> -->
+
+            	<div class="col-md-8 col-md-pull-4">
+					<h3 class="pizza-title">Meat Pizzas</h3>
+					<div class="meat-pizza-menu"></div>
+					<h3 class="pizza-title">Vegetarian Pizzas</h3>
+					<div class="veg-pizza-menu"></div>
+
+		            <h2>Drinks:</h2>
+		            <div class="drink-menu"></div>
+
+					<h2>Desserts:</h2>
+		            <div class="dessert-menu"></div>
+        		</div>
             </div>
 
-			<h3 class="pizza-title">Meat Pizzas</h3>
-			<div class="meat-pizza-menu"></div>
-			<h3 class="pizza-title">Vegetarian Pizzas</h3>
-			<div class="veg-pizza-menu"></div>
+            <div class="template-pizza">
+	            <div class="details">
+	                <p class="name"></p>
+	                <p class="description"></p>
+		            <p class="prices"><span class="small-price"></span>
+		               	<button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="small" data-price="">Add to 	Cart
+						</button>
+		                <span class="medium-price"></span> 
+		                <button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="medium" data-price="">Add to 	Cart
+						</button>
+		                <span class="large-price"></span>
+		                <button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="large" data-price="">Add to 	Cart
+						</button>
+	                </p>    
+	            </div>
+	        </div>
 
-			<div class="template-pizza">
+	        <div class="template-drink">
                 <div class="details">
                     <p class="name"></p>
-                    <p class="description"></p>
-	                <p class="prices"><span class="small-price"></span>
-	                	<button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="small" data-price="">Add to 	Cart
-						</button>
-	                    <span class="medium-price"></span> 
-	                    <button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="medium" data-price="">Add to 	Cart
-						</button>
-	                    <span class="large-price"></span>
-	                    <button class="btn btn-default add-to-cart" type="button" data-type="pizza" data-name="" data-size="large" data-price="">Add to 	Cart
-						</button>
-                	</p>
-                    
-                </div>
-            </div>
-
-            <h2>Drinks:</h2>
-            <div class="drink-menu"></div>
-
-            <div class="template-drink">
-                <div class="details">
-                    <p class="drink-name"></p>
-                    <p class="drink-price"></p>
+                    <p class="price"></p>
                     <button class="btn btn-default add-to-cart" type="button" data-type="drink" data-name="" data-price="">Add to 	Cart
 					</button>
                 </div>
             </div>
 
-			<h2>Desserts:</h2>
-            <div class="dessert-menu"></div>
-
             <div class="template-dessert">
                 <div class="details">
-                    <p class="dessert-name"></p>
-                    <p class="dessert-price"></p>
+                    <p class="name"></p>
+                    <p class="price"></p>
                     <button class="btn btn-default add-to-cart" type="button" data-type="dessert" data-name="" data-price="">Add to 	Cart
 					</button>
                 </div>
             </div>
 		</div>
 
+		<div class="modal fade cart-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Delivery Order Information</h4>
+                    </div>
+                    <div class="modal-body">
+                    	<form method="POST" action="http://dawgpizza.com/orders/" class="form-horizontal cart-form" role="form">
+                        	<div class="form-group">
+			                    <label class="col-lg-2 control-label" for="name">Name</label>
+			                    <div class="col-lg-10">
+			                        <input type="text" class="form-control name-submit" name="name" id="name" placeholder="name" required>
+			                    </div>
+			                </div>
+			                <div class="form-group">
+			                    <label class="col-lg-2 control-label" for="addr-1">Address</label>
+			                    <div class="col-lg-10">
+			                        <input type="text" class="form-control addr-submit" name="addr-1" id="addr-1" placeholder="street address">
+			                        <input type="text" class="form-control" name="addr-2">
+			                        <input type="text" class="form-control" name="addr-3">
+			                    </div>
+			                </div>
+			                <div class="form-group">
+			                	<label class="col-lg-2 control-label" for="city">Zip Code</label>
+			                	<div class="col-lg-3">
+	                                <input type="text" class="form-control zip-submit" name="zip" placeholder="zip code">
+	                            </div>
+			                </div>
+			                <div class="form-group">
+			                    <label class="col-lg-2 control-label" for="phone">Phone</label>
+			                    <div class="col-lg-10">
+			                        <input type="tel" class="form-control phone-submit" name="phone" id="phone" placeholder="primary phone number">
+			                    </div>
+			                </div>
+			                <input type="hidden" name="cart">
+                    	</form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary btn-submit">Submit</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 		<script src="http://www.dawgpizza.com/orders/menu.js"></script>
 		<script src="js/menu-template.js"></script>
+		<script src="js/cart.js"></script>
 		<script src="js/menu.js"></script>
 	</body>
 </html>

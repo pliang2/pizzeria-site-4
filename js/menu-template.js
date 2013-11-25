@@ -51,8 +51,8 @@ function drinkDisplay(menu) {
 	for (idx = 0; idx < com.dawgpizza.menu.drinks.length; ++idx) {
 		instance = template.clone();
 	    drink = com.dawgpizza.menu.drinks[idx];
-	    instance.find('.drink-name').html(drink.name);
-	    instance.find('.drink-price').html("$" + drink.price);
+	    instance.find('.name').html(drink.name);
+	    instance.find('.price').html("$" + drink.price);
 	    drinkMenu.append(instance);
 
 	    //drink.name = name of drink
@@ -75,8 +75,8 @@ function dessertDisplay(menu) {
 	for (idx = 0; idx < com.dawgpizza.menu.desserts.length; ++idx) {
 		instance = template.clone();
 	    dessert = com.dawgpizza.menu.desserts[idx];
-	    instance.find('.dessert-name').html(dessert.name);
-	    instance.find('.dessert-price').html("$" + dessert.price);
+	    instance.find('.name').html(dessert.name);
+	    instance.find('.price').html("$" + dessert.price);
 	    dessertMenu.append(instance);
 	}
 }

@@ -39,8 +39,16 @@ $(function() {
         //properties have been filled out, and that the 
         //total order is greater than $20 (see homework 
         //instructions) 
+        $('.cart-modal').modal(); 
 
         postCart(cart, $('.cart-form'));
+    });
+
+    $('.btn-submit').click(function() {
+        cart.name = $('.name-submit').val();
+        cart.address1 = $('.address-submit').val();
+        cart.zip = $('.zip-submit').val();
+        cart.phone = $('.phone-submit').val();
     });
 });
 
@@ -51,7 +59,7 @@ $(function() {
 //  - container (jQuery object) reference to the container <div>
 //
 function renderCart(cart, container) {
-    var idx, item;
+    var idx, item, cloneTemplate;
     
     //empty the container of whatever is there currently
     container.empty();
@@ -61,7 +69,12 @@ function renderCart(cart, container) {
         item = cart.items[idx];
 
         //TODO: code to render the cart item
+        cloneTemplate = container.clone();
 
+        cloneTemplate.find('add-to-cart').attr('data-name', item.name);
+        cloneTemplate.find('add-to-cart').attr('data-price', item.price);
+
+        container.append(cloneTemplate);
     } //for each cart item
 
     //TODO: code to render sub-total price of the cart
